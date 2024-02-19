@@ -24,6 +24,7 @@ requirements:
   run:
     - python
     - datasets >=2.0.0
+    - evaluate
     - jsonlines
     - numexpr
     - openai >=0.6.4
