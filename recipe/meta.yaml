@@ -1,5 +1,5 @@
 {% set name = "lm_eval" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lm_eval-{{ version }}.tar.gz
-  sha256: 643b12bf9374f4d7c78ce55471b6ad82c130ab1aa0577d97fdfa48875dbc598b
+  sha256: 2dac56039b191c2dfb0011329ec9082e474006a15575db45468b88753923b34b
 
 build:
   skip: true  # [py2k]
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -28,6 +28,7 @@ requirements:
     - jsonlines
     - numexpr
     - openai >=0.6.4
+    - peft
     - pybind11 >=2.6.2
     - pycountry
     - pytablewriter
@@ -43,7 +44,6 @@ requirements:
 test:
   imports:
     - lm_eval
-    - scripts
   commands:
     - pip check
   requires:
