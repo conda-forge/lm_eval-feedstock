@@ -24,9 +24,11 @@ requirements:
   run:
     - python
     - datasets >=2.0.0
+    - evaluate
     - jsonlines
     - numexpr
     - openai >=0.6.4
+    - peft
     - pybind11 >=2.6.2
     - pycountry
     - pytablewriter
@@ -42,7 +44,6 @@ requirements:
 test:
   imports:
     - lm_eval
-    - scripts
   commands:
     - pip check
   requires:
