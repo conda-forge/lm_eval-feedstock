@@ -41,6 +41,7 @@ requirements:
     - transformers >=4.1
     - zstandard
     - more-itertools
+    - word2number
 
 test:
   imports:
