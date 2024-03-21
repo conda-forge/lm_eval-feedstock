@@ -1,5 +1,5 @@
 {% set name = "lm_eval" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lm_eval-{{ version }}.tar.gz
-  sha256: 8e9959ef7ac3393544add0b164f6aaf8de2f6b6ec363ad97abb62067b3aa8f38
+  sha256: ddc2a1ea7041cbadf45afd118ebdecd707b1f14446fad51df212d2bf3defb4d2
 
 build:
   skip: true  # [py2k]
@@ -40,6 +40,8 @@ requirements:
     - tqdm-multiprocess
     - transformers >=4.1
     - zstandard
+    - more-itertools
+    - word2number
 
 test:
   imports:
