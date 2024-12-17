@@ -1,27 +1,29 @@
-{% set name = "lm_eval" %}
-{% set version = "0.4.5" %}
+context:
+  name: lm_eval
+  version: 0.4.5
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lm_eval-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/lm_eval-${{ version }}.tar.gz
   sha256: f5c28b6fdb838bd052037419addbf14b8de47e786390dd98fbfbf8e23c1b6155
 
 build:
-  skip: true  # [py2k]
-  skip: true  # [win]
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  skip:
+    - win
+  script: python -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - datasets >=2.0.0
@@ -44,20 +46,20 @@ requirements:
     - more-itertools
     - word2number
 
-test:
-  imports:
-    - lm_eval
-  commands:
-    - lm_eval -h
-    # - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - lm_eval
+      pip_check: true
+  - requirements:
+    script:
+      - lm_eval -h
 
 about:
-  home: https://github.com/EleutherAI/lm-evaluation-harness
   summary: A framework for evaluating autoregressive language models
   license: MIT
   license_file: LICENSE.md
+  homepage: https://github.com/EleutherAI/lm-evaluation-harness
 
 extra:
   recipe-maintainers:
