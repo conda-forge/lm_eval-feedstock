@@ -1,6 +1,6 @@
 context:
   name: lm_eval
-  version: 0.4.5
+  version: 0.4.7
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/lm_eval-${{ version }}.tar.gz
-  sha256: f5c28b6fdb838bd052037419addbf14b8de47e786390dd98fbfbf8e23c1b6155
+  sha256: dcbef8722f363f58cfba36b6d783fc6bb17924b24b8da1684bf1ac835866208d
 
 build:
   number: 0
@@ -24,31 +24,32 @@ requirements:
         - cross-python_${{ target_platform }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
+    - pybind11 >=2.6.2
   host:
     - python
     - pip
     - setuptools
   run:
     - python
-    - datasets >=2.0.0
+    - pytorch
+    - accelerate >=0.26.0
     - evaluate
+    - datasets >=2.16.0
+    - evaluate >=0.4.0
     - jsonlines
     - numexpr
-    - openai >=0.6.4
-    - peft
-    - pybind11 >=2.6.2
-    - pycountry
+    - peft >=0.2.0
     - pytablewriter
     - rouge-score >=0.0.4
-    - sacrebleu ==1.5.0
+    - sacrebleu >=1.5.0
     - scikit-learn >=0.24.1
     - sqlitedict
-    - pytorch >=1.7
     - tqdm-multiprocess
     - transformers >=4.1
     - zstandard
-    - more-itertools
+    - dill
     - word2number
+    - more-itertools
 
 tests:
   - python:
