@@ -22,11 +22,11 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - pip
-        - setuptools
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - pybind11 >=2.6.2
+    - pip
+    - setuptools
   host:
     - python
     - pip
