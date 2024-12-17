@@ -55,7 +55,8 @@ tests:
   - python:
       imports:
         - lm_eval
-      pip_check: true
+        # disabled because of https://github.com/conda-forge/tcolorpy-feedstock/issues/12
+      pip_check: false
   - requirements:
     script:
       - lm_eval -h
