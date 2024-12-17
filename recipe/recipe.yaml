@@ -14,7 +14,7 @@ build:
   number: 0
   skip:
     - win
-  script: python -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -25,8 +25,6 @@ requirements:
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - pybind11 >=2.6.2
-    - pip
-    - setuptools
   host:
     - python
     - pip
