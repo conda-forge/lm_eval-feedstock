@@ -39,6 +39,7 @@ requirements:
     - jsonlines
     - numexpr
     - peft >=0.2.0
+    - pybind11 >=2.6.2
     - pytablewriter
     - rouge-score >=0.0.4
     - sacrebleu >=1.5.0
@@ -55,8 +56,7 @@ tests:
   - python:
       imports:
         - lm_eval
-        # disabled because of https://github.com/conda-forge/tcolorpy-feedstock/issues/12
-      pip_check: false
+      pip_check: true
   - requirements:
     script:
       - lm_eval -h
