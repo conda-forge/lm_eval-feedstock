@@ -1,13 +1,13 @@
 {% set name = "lm_eval" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lm_eval-{{ version }}.tar.gz
-  sha256: f5c28b6fdb838bd052037419addbf14b8de47e786390dd98fbfbf8e23c1b6155
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lm_eval-{{ version }}.tar.gz
+  sha256: dcbef8722f363f58cfba36b6d783fc6bb17924b24b8da1684bf1ac835866208d
 
 build:
   skip: true  # [py2k]
