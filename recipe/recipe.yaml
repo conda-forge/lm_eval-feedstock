@@ -11,7 +11,7 @@ source:
   sha256: dcbef8722f363f58cfba36b6d783fc6bb17924b24b8da1684bf1ac835866208d
 
 build:
-  number: 0
+  number: 1
   skip:
     - win
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -51,6 +51,7 @@ requirements:
     - dill
     - word2number
     - more-itertools
+    - mbstrdecoder ==1.1.3
 
 tests:
   - python:
