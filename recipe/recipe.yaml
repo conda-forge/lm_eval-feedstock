@@ -1,6 +1,6 @@
 context:
   name: lm_eval
-  version: "0.4.8"
+  version: "0.4.9"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/lm_eval-${{ version }}.tar.gz
-  sha256: 3a7ffff20347315bf2318796b90ec9f7dd819836567085b5f57fdcc8bc450b4d
+  sha256: 04a72aae0d68c1de1b5ad4aafb99cc4245925830e418e76c0021ae463f9575e0
 
 build:
   number: 0

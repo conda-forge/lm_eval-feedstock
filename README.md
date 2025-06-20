@@ -179,7 +179,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-lm_eval-green.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-lm__eval-green.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lm_eval.svg)](https://anaconda.org/conda-forge/lm_eval) |
 
 Installing lm_eval
 ==================
