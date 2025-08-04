@@ -7,7 +7,7 @@
 
 [project]
 name = "lm_eval-feedstock"
-version = "3.50.1"  # conda-smithy version used to generate this file
+version = "3.51.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/lm_eval-feedstock"
 authors = ["@conda-forge/lm_eval"]
 channels = ["conda-forge"]
