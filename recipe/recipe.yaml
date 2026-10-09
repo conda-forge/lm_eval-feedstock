@@ -47,6 +47,7 @@ requirements:
     - sqlitedict
     - tqdm-multiprocess
     - transformers >=4.1
+    - huggingface_hub <1.0
     - zstandard
     - dill
     - word2number
